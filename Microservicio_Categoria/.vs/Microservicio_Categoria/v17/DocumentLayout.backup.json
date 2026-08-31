@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\microservicio_categoria.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\microservicio_categoria.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_categoria\\microservicio_categoria\\migrations\\20260823222446_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C9C3B41-6364-4D0C-B0D9-A18B1986B338}|Microservicio_Categoria\\Microservicio_Categoria.csproj|solutionrelative:microservicio_categoria\\migrations\\20260823222446_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microservicio_Categoria",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Microservicio_Categoria.csproj",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Microservicio_Categoria.csproj",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Microservicio_Categoria.csproj",
+              "RelativeToolTip": "Microservicio_Categoria\\Microservicio_Categoria.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-25T13:14:06.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Dockerfile",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Dockerfile",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Dockerfile",
+              "RelativeToolTip": "Microservicio_Categoria\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-23T22:48:29.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "Microservicio_Categoria\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:29:27.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20260823222446_Inicial.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Migrations\\20260823222446_Inicial.cs",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Migrations\\20260823222446_Inicial.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Migrations\\20260823222446_Inicial.cs",
+              "RelativeToolTip": "Microservicio_Categoria\\Migrations\\20260823222446_Inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:24:47.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Program.cs",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Program.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Program.cs",
+              "RelativeToolTip": "Microservicio_Categoria\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:21:03.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\appsettings.json",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\appsettings.json",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\appsettings.json",
+              "RelativeToolTip": "Microservicio_Categoria\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-23T22:17:24.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\appsettings.Development.json",
+              "RelativeToolTip": "Microservicio_Categoria\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-23T22:17:17.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Microservicio_Categoria\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:16:58.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "Microservicio_Categoria\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Categoria\\Microservicio_Categoria\\Models\\Categoria.cs",
+              "RelativeToolTip": "Microservicio_Categoria\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:11:00.15Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

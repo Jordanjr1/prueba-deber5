@@ -1,0 +1,111 @@
+version: '3.4'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Skrillex1."
+      MSSQL_PID: "Express"
+      MSSQL_SA_PASSWORD: "Skrillex1."
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssqldata:/var/opt/mssql
+    networks:
+      - red-microservicios
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_server
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - red-microservicios
+
+  microservicio.categoria:
+    image: microserviciocategoria
+    build:
+      context: ./Microservicio_Categoria/Microservicio_Categoria
+      dockerfile: Dockerfile
+    container_name: microservicio.categoria-1
+    ports:
+      - "5001:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: >-
+        Server=sql_server_db,1433;
+        Database=CategoriaDB;
+        User Id=Categoria_V;
+        Password=Skrillex1.;
+        TrustServerCertificate=True;
+        Encrypt=False;
+      RabbitMQ__HostName: rabbitmq_server
+      RabbitMQ__Port: 5672
+    depends_on:
+      sqlserver:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - red-microservicios
+
+  microservicio.vehiculo:
+    image: microserviciovehiculo
+    build:
+      context: ./Microservicio_Vehiculo/Microservicio_Vehiculo
+      dockerfile: Dockerfile
+    container_name: microservicio.vehiculo-1
+    ports:
+      - "5002:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: >-
+        Server=sql_server_db,1433;
+        Database=VehiculoDB;
+        User Id=Vehiculos;
+        Password=Skrillex1.;
+        TrustServerCertificate=True;
+        Encrypt=False;
+      RabbitMQ__HostName: rabbitmq_server
+      RabbitMQ__Port: 5672
+    depends_on:
+      sqlserver:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - red-microservicios
+
+  apigateway:
+    image: apigatewayvehiculos
+    build:
+      context: ./ApiGateway_Vehiculos/ApiGateway_Vehiculos
+      dockerfile: Dockerfile
+    container_name: apigateway-1
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:8080"
+    depends_on:
+      - microservicio.categoria
+      - microservicio.vehiculo
+    networks:
+      - red-microservicios
+
+volumes:
+  mssqldata:
+
+networks:
+  red-microservicios:
+    driver: bridge

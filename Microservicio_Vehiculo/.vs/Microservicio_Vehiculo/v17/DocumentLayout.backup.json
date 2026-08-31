@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\microservicio_vehiculo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\microservicio_vehiculo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\models\\vehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\models\\vehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_vehiculo\\microservicio_vehiculo\\migrations\\20260823223713_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D82D39A-FD47-4294-8379-9250655F90D9}|Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj|solutionrelative:microservicio_vehiculo\\migrations\\20260823223713_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microservicio_Vehiculo",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Microservicio_Vehiculo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-25T13:17:12.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Dockerfile",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Dockerfile",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Dockerfile",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-23T22:48:13.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:37:44.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260823223713_Inicial.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Migrations\\20260823223713_Inicial.cs",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Migrations\\20260823223713_Inicial.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Migrations\\20260823223713_Inicial.cs",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Migrations\\20260823223713_Inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:37:13.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Program.cs",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Program.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Program.cs",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:36:33.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\appsettings.json",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\appsettings.json",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\appsettings.json",
+              "RelativeToolTip": "Microservicio_Vehiculo\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-23T22:35:30.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:35:21.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Vehiculo.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Models\\Vehiculo.cs",
+              "RelativeDocumentMoniker": "Microservicio_Vehiculo\\Models\\Vehiculo.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Vehiculo\\Microservicio_Vehiculo\\Models\\Vehiculo.cs",
+              "RelativeToolTip": "Microservicio_Vehiculo\\Models\\Vehiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-23T22:35:01.062Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
