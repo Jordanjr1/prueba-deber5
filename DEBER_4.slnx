@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Frontend_Vehiculos/Frontend_Vehiculos.csproj" Id="c01ed7a5-4227-4fd5-bf01-9a979024019a" />
+  <Project Path="Microservicio_Auth/Microservicio_Auth.csproj" />
+</Solution>

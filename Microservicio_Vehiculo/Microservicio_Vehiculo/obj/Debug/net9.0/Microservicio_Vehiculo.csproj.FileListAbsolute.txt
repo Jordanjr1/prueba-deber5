@@ -311,3 +311,5 @@ C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehicul
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehiculo\obj\Debug\net9.0\Microservicio_Vehiculo.pdb
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehiculo\obj\Debug\net9.0\Microservicio_Vehiculo.genruntimeconfig.cache
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehiculo\obj\Debug\net9.0\ref\Microservicio_Vehiculo.dll
+C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehiculo\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Users\skrul\source\repos\DEBER_4\Microservicio_Vehiculo\Microservicio_Vehiculo\obj\Debug\net9.0\Microservicio_Vehiculo.sourcelink.json

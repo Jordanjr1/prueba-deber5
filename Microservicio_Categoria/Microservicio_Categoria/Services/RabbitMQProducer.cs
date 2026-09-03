@@ -4,11 +4,6 @@ using System.Text.Json;
 
 namespace Microservicio_Categoria.Services
 {
-    public interface IRabbitMQProducer
-    {
-        void EnviarMensaje<T>(T mensaje);
-    }
-
     public class RabbitMQProducer : IRabbitMQProducer
     {
         private readonly IConfiguration _configuration;
@@ -18,7 +13,7 @@ namespace Microservicio_Categoria.Services
             _configuration = configuration;
         }
 
-        public void EnviarMensaje<T>(T mensaje)
+        public async Task EnviarMensajeAsync<T>(T mensaje)
         {
             var factory = new ConnectionFactory
             {
@@ -28,27 +23,27 @@ namespace Microservicio_Categoria.Services
                 Password = _configuration["RabbitMQ:Password"] ?? "guest"
             };
 
-            using var connection = factory.CreateConnectionAsync().Result;
-            using var channel = connection.CreateChannelAsync().Result;
+            using var connection = await factory.CreateConnectionAsync();
+            using var channel = await connection.CreateChannelAsync();
 
             var queueName = _configuration["RabbitMQ:QueueName"] ?? "categoria-queue";
 
-            channel.QueueDeclareAsync(
+            await channel.QueueDeclareAsync(
                 queue: queueName,
                 durable: true,
                 exclusive: false,
                 autoDelete: false,
                 arguments: null
-            ).GetAwaiter().GetResult();
+            );
 
             var jsonString = JsonSerializer.Serialize(mensaje);
             var body = Encoding.UTF8.GetBytes(jsonString);
 
-            channel.BasicPublishAsync(
-                exchange: "",
+            await channel.BasicPublishAsync(
+                exchange: string.Empty,
                 routingKey: queueName,
                 body: body
-            ).GetAwaiter().GetResult();
+            );
         }
     }
 }

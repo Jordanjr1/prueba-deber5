@@ -40,9 +40,21 @@ namespace Microservicio_Categoria.Controllers
             };
 
             // Enviar el mensaje a RabbitMQ para que el microservicio de vehículos se entere
-            _rabbitMQProducer.EnviarMensaje(evento);
+            await _rabbitMQProducer.EnviarMensajeAsync(evento);
 
             return CreatedAtAction(nameof(GetCategorias), new { id = categoria.IdCategoria }, categoria);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategoria(int id)
+        {
+            var categoria = await _context.Categorias.FindAsync(id);
+            if (categoria == null) return NotFound();
+
+            _context.Categorias.Remove(categoria);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
     }
 }

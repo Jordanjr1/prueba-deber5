@@ -1,7 +1,8 @@
 using Yarp.ReverseProxy.Configuration;
-using Swashbuckle.AspNetCore.SwaggerGen; // O aseg鷕ate de tener este using:
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Builder;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ApiGateway_Vehiculos
 {
@@ -11,41 +12,100 @@ namespace ApiGateway_Vehiculos
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Configuraci髇 de YARP
+            // 1. Configuraci贸n de CORS (Debe ir ANTES de builder.Build())
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
+            // 2. Configuraci贸n de Autenticaci贸n JWT
+            var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+            var secretKey = jwtSettings["SecretKey"]!;
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            builder.Services.AddAuthorization();
+
+            // 3. Configuraci贸n de YARP Reverse Proxy
             builder.Services.AddReverseProxy()
                 .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
 
-            // Servicios para Swagger / OpenAPI
+            // 4. Configuraci贸n de Swagger
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Escribe: Bearer {tu_token_aqui}"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
 
             builder.Services.AddControllers();
-            builder.Services.AddOpenApi();
 
             var app = builder.Build();
 
-            // Configurar el middleware de Swagger para que abra directamente en la ra韟 (http://localhost:5000/)
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Gateway Vehiculos V1");
-                c.RoutePrefix = string.Empty;
-            });
-
-            app.MapGet("/", () => "API Gateway activo!");
-
-            // Mapear el Reverse Proxy de YARP
-            app.MapReverseProxy();
-
-            // Configure the HTTP request pipeline.
+            // 5. Configurar Middleware Pipeline
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Gateway Vehiculos V1");
+                    c.RoutePrefix = string.Empty;
+                });
             }
 
-            app.UseHttpsRedirection();
+            // CORS DEBE ir antes de Autenticaci贸n, Autorizaci贸n y Mapeo de Rutas
+            app.UseCors("AllowAll");
+
+            app.UseAuthentication();
             app.UseAuthorization();
+
             app.MapControllers();
+            app.MapReverseProxy();
 
             app.Run();
         }

@@ -1,6 +1,45 @@
-@ApiGateway_Vehiculos_HostAddress = http://localhost:5107
+@Auth_HostAddress = https://localhost:44337
+@Gateway_HostAddress = http://localhost:5000
 
-GET {{ApiGateway_Vehiculos_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Login en Microservicio_Auth (Obtener Token)
+# @name login
+POST {{Auth_HostAddress}}/api/Auth/login
+Content-Type: application/json
 
-###
+{
+  "usuario": "admin",
+  "password": "123456"
+}
+
+
+### 2. Probar acceso al Gateway SIN Token (Debe devolver 401 Unauthorized)
+GET {{Gateway_HostAddress}}/api/Vehiculos
+
+
+### 3. Probar acceso al Gateway CON Token JWT (Debe dar paso libre)
+GET {{Gateway_HostAddress}}/api/Vehiculos
+Authorization: Bearer {{login.response.body.$.token}}
+
+
+### 4. Crear un nuevo Vehículo a través del Gateway
+POST {{Gateway_HostAddress}}/api/Vehiculos
+Authorization: Bearer {{login.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anio": 2024,
+  "idCategoria": 6
+}
+
+### 5. Crear una Categoría (Dispara evento en RabbitMQ)
+POST {{Gateway_HostAddress}}/api/Categorias
+Authorization: Bearer {{login.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "nombre": "SUV",
+  "descripcion": "Vehículos de uso mixto"
+}
+

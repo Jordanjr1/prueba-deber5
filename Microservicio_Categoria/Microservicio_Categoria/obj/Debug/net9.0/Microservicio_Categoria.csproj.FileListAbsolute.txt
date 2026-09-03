@@ -311,3 +311,5 @@ C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Catego
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Categoria\obj\Debug\net9.0\Microservicio_Categoria.pdb
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Categoria\obj\Debug\net9.0\Microservicio_Categoria.genruntimeconfig.cache
 C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Categoria\obj\Debug\net9.0\ref\Microservicio_Categoria.dll
+C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Categoria\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Users\skrul\source\repos\DEBER_4\Microservicio_Categoria\Microservicio_Categoria\obj\Debug\net9.0\Microservicio_Categoria.sourcelink.json

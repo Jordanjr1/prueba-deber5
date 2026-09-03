@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\apigateway_vehiculos.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\apigateway_vehiculos.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\apigateway_vehiculos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\apigateway_vehiculos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\apigateway_vehiculos\\apigateway_vehiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F15209FD-A5C3-4E9F-A623-C6CA324CB037}|ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj|solutionrelative:apigateway_vehiculos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,19 +55,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ApiGateway_Vehiculos",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
-              "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
-              "RelativeToolTip": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-25T13:07:48.925Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiGateway_Vehiculos\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-02T13:57:55.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "ApiGateway_Vehiculos.http",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.http",
+              "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.http",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.http",
+              "RelativeToolTip": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.http",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-09-02T13:39:22.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\Dockerfile",
               "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\Dockerfile",
@@ -67,8 +87,7 @@
               "RelativeToolTip": "ApiGateway_Vehiculos\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-08-23T22:49:49.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-23T22:49:49.12Z"
             },
             {
               "$type": "Document",
@@ -78,23 +97,35 @@
               "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\Program.cs",
               "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\Program.cs",
               "RelativeToolTip": "ApiGateway_Vehiculos\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-23T22:43:02.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\appsettings.json",
               "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\appsettings.json",
               "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\appsettings.json",
               "RelativeToolTip": "ApiGateway_Vehiculos\\appsettings.json",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAuwCgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-08-23T22:40:15.4Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiGateway_Vehiculos.csproj",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
+              "RelativeDocumentMoniker": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
+              "RelativeToolTip": "ApiGateway_Vehiculos\\ApiGateway_Vehiculos.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-25T13:07:48.925Z"
             }
           ]
         }

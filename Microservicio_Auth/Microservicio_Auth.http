@@ -1,0 +1,6 @@
+@Microservicio_Auth_HostAddress = http://localhost:5204
+
+GET {{Microservicio_Auth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "Microservicio_Auth\\Microservicio_Auth.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Frontend_Vehiculos\\Frontend_Vehiculos.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

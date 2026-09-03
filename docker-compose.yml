@@ -18,15 +18,32 @@ services:
 
   rabbitmq:
     image: rabbitmq:3-management
-    container_name: rabbitmq_server
+    container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "admin"
+      RABBITMQ_DEFAULT_PASS: "admin"
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - red-microservicios
+
+  microservicio.auth:
+    image: microservicioauth
+    build:
+      context: ./Microservicio_Auth
+      dockerfile: Dockerfile
+    container_name: microservicio.auth-1
+    ports:
+      - "5003:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:8080"
     networks:
       - red-microservicios
 
@@ -41,15 +58,12 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "http://+:8080"
-      ConnectionStrings__DefaultConnection: >-
-        Server=sql_server_db,1433;
-        Database=CategoriaDB;
-        User Id=Categoria_V;
-        Password=Skrillex1.;
-        TrustServerCertificate=True;
-        Encrypt=False;
-      RabbitMQ__HostName: rabbitmq_server
+      ConnectionStrings__ConexionSql: "Server=sql_server_db,1433;Database=CategoriaDB;User Id=Categoria_V;Password=Skrillex1.;TrustServerCertificate=True;Encrypt=False;"
+      ConnectionStrings__DefaultConnection: "Server=sql_server_db,1433;Database=CategoriaDB;User Id=Categoria_V;Password=Skrillex1.;TrustServerCertificate=True;Encrypt=False;"
+      RabbitMQ__HostName: rabbitmq
       RabbitMQ__Port: 5672
+      RabbitMQ__UserName: admin
+      RabbitMQ__Password: admin
     depends_on:
       sqlserver:
         condition: service_started
@@ -69,15 +83,12 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "http://+:8080"
-      ConnectionStrings__DefaultConnection: >-
-        Server=sql_server_db,1433;
-        Database=VehiculoDB;
-        User Id=Vehiculos;
-        Password=Skrillex1.;
-        TrustServerCertificate=True;
-        Encrypt=False;
-      RabbitMQ__HostName: rabbitmq_server
+      ConnectionStrings__ConexionSql: "Server=sql_server_db,1433;Database=VehiculoDB;User Id=Vehiculos;Password=Skrillex1.;TrustServerCertificate=True;Encrypt=False;"
+      ConnectionStrings__DefaultConnection: "Server=sql_server_db,1433;Database=VehiculoDB;User Id=Vehiculos;Password=Skrillex1.;TrustServerCertificate=True;Encrypt=False;"
+      RabbitMQ__HostName: rabbitmq
       RabbitMQ__Port: 5672
+      RabbitMQ__UserName: admin
+      RabbitMQ__Password: admin
     depends_on:
       sqlserver:
         condition: service_started
@@ -97,7 +108,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "http://+:8080"
+      ReverseProxy__Clusters__authCluster__Destinations__authDestination__Address: "http://microservicio.auth:8080/"
+      ReverseProxy__Clusters__categoriasCluster__Destinations__categoriasDestination__Address: "http://microservicio.categoria:8080/"
+      ReverseProxy__Clusters__vehiculosCluster__Destinations__vehiculosDestination__Address: "http://microservicio.vehiculo:8080/"
     depends_on:
+      - microservicio.auth
       - microservicio.categoria
       - microservicio.vehiculo
     networks:
