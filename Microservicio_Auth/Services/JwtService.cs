@@ -14,7 +14,7 @@ public class JwtService
         _config = config;
     }
 
-    public string GenerarToken(string usuario)
+    public string GenerarToken(string usuario, string rol)
     {
         var jwtSettings = _config.GetSection("JwtSettings");
         var secretKey = jwtSettings["SecretKey"]!;
@@ -27,6 +27,7 @@ public class JwtService
         var claims = new[]
         {
             new Claim(ClaimTypes.Name, usuario),
+            new Claim(ClaimTypes.Role, rol),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 

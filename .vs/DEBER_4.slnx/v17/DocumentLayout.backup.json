@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\microservicio_auth.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\microservicio_auth.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\frontend_vehiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|solutionrelative:frontend_vehiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\frontend_vehiculos\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|solutionrelative:frontend_vehiculos\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,32 +59,12 @@
       "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\frontend_vehiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|solutionrelative:frontend_vehiculos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\frontend_vehiculos\\models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C01ED7A5-4227-4FD5-BF01-9A979024019A}|Frontend_Vehiculos\\Frontend_Vehiculos.csproj|solutionrelative:frontend_vehiculos\\models\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\microservicio_auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\microservicio_auth.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|c:\\users\\skrul\\source\\repos\\deber_4\\microservicio_auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73469165-0F0F-225C-DE26-1A2F673AD1C5}|Microservicio_Auth\\Microservicio_Auth.csproj|solutionrelative:microservicio_auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,33 +94,122 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Data\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Data\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Data\\AuthDbContext.cs",
+              "RelativeToolTip": "Microservicio_Auth\\Data\\AuthDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-05T19:38:53.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Models\\Usuario.cs",
+              "RelativeToolTip": "Microservicio_Auth\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-05T19:32:39.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\appsettings.json",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\appsettings.json",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\appsettings.json",
+              "RelativeToolTip": "Microservicio_Auth\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-02T13:21:42.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Home.razor",
-              "RelativeToolTip": "Frontend_Vehiculos\\Pages\\Home.razor",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAwwLQBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-02T22:43:56.401Z",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Controller\\AuthController.cs",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Controller\\AuthController.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Controller\\AuthController.cs",
+              "RelativeToolTip": "Microservicio_Auth\\Controller\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T13:22:38.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Services\\JwtService.cs",
+              "RelativeToolTip": "Microservicio_Auth\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T13:22:08.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Services\\ApiService.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Services\\ApiService.cs",
-              "RelativeToolTip": "Frontend_Vehiculos\\Services\\ApiService.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAgwIAAAAAhAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Program.cs",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Program.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Program.cs",
+              "RelativeToolTip": "Microservicio_Auth\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T22:42:48.26Z",
+              "WhenOpened": "2026-09-02T13:22:50.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "Microservicio_Auth.http",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Microservicio_Auth.http",
+              "RelativeDocumentMoniker": "Microservicio_Auth\\Microservicio_Auth.http",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Microservicio_Auth.http",
+              "RelativeToolTip": "Microservicio_Auth\\Microservicio_Auth.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-09-04T14:35:05.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Weather.razor",
+              "RelativeToolTip": "Frontend_Vehiculos\\Pages\\Weather.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-02T23:21:23.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoriaDto.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\CategoriaDto.cs",
+              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Models\\CategoriaDto.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\CategoriaDto.cs",
+              "RelativeToolTip": "Frontend_Vehiculos\\Models\\CategoriaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T22:41:52.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\AuthDto.cs",
               "RelativeDocumentMoniker": "Frontend_Vehiculos\\Models\\AuthDto.cs",
@@ -120,45 +221,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\appsettings.json",
-              "RelativeDocumentMoniker": "Microservicio_Auth\\appsettings.json",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\appsettings.json",
-              "RelativeToolTip": "Microservicio_Auth\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-02T13:21:42.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoriaDto.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\CategoriaDto.cs",
-              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Models\\CategoriaDto.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\CategoriaDto.cs",
-              "RelativeToolTip": "Frontend_Vehiculos\\Models\\CategoriaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Services\\ApiService.cs",
+              "RelativeToolTip": "Frontend_Vehiculos\\Services\\ApiService.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAgwIAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T22:41:52.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-02T22:42:48.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Weather.razor",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Weather.razor",
-              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Pages\\Weather.razor",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Weather.razor",
-              "RelativeToolTip": "Frontend_Vehiculos\\Pages\\Weather.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-02T23:21:23.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "VehiculoDto.cs",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Models\\VehiculoDto.cs",
               "RelativeDocumentMoniker": "Frontend_Vehiculos\\Models\\VehiculoDto.cs",
@@ -166,24 +241,35 @@
               "RelativeToolTip": "Frontend_Vehiculos\\Models\\VehiculoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T23:21:11.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-02T23:21:11.135Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Controller\\AuthController.cs",
-              "RelativeDocumentMoniker": "Microservicio_Auth\\Controller\\AuthController.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Controller\\AuthController.cs",
-              "RelativeToolTip": "Microservicio_Auth\\Controller\\AuthController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwCEAAAA4AAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Program.cs",
+              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Program.cs",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Program.cs",
+              "RelativeToolTip": "Frontend_Vehiculos\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T13:22:38.469Z"
+              "WhenOpened": "2026-09-02T22:42:03.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Pages\\Home.razor",
+              "RelativeToolTip": "Frontend_Vehiculos\\Pages\\Home.razor",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAwwLQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-02T22:43:56.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Microservicio_Auth\\Properties\\launchSettings.json",
@@ -195,19 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Program.cs",
-              "RelativeDocumentMoniker": "Frontend_Vehiculos\\Program.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Frontend_Vehiculos\\Program.cs",
-              "RelativeToolTip": "Frontend_Vehiculos\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T22:42:03.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Microservicio_Auth.csproj",
               "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Microservicio_Auth.csproj",
               "RelativeDocumentMoniker": "Microservicio_Auth\\Microservicio_Auth.csproj",
@@ -216,30 +290,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-09-02T13:28:17.663Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Program.cs",
-              "RelativeDocumentMoniker": "Microservicio_Auth\\Program.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Program.cs",
-              "RelativeToolTip": "Microservicio_Auth\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T13:22:50.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "Microservicio_Auth\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\skrul\\source\\repos\\DEBER_4\\Microservicio_Auth\\Services\\JwtService.cs",
-              "RelativeToolTip": "Microservicio_Auth\\Services\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T13:22:08.972Z"
             }
           ]
         }

@@ -12,10 +12,10 @@ namespace Frontend_Vehiculos
             builder.RootComponents.Add<App>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
-            // Configurar HttpClient hacia el puerto de tu ApiGateway_Vehiculos
+            // Configurar HttpClient apuntando al ApiGateway en Azure
             builder.Services.AddScoped(sp => new HttpClient
             {
-                BaseAddress = new Uri("http://localhost:5000/")
+                BaseAddress = new Uri("http://20.9.128.203:5000/")
             });
 
             // Registrar el servicio cliente de APIs

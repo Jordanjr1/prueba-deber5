@@ -1,6 +1,7 @@
+using Microservicio_Auth.Data;
 using Microservicio_Auth.Services;
 using Microsoft.AspNetCore.Builder;
-
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,12 +10,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 2. Inyección de Dependencias
+// 2. Configurar la cadena de conexión y DbContext para SQL Server
+var connectionString = builder.Configuration.GetConnectionString("ConexionSql")
+    ?? builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AuthDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// 3. Inyección de Dependencias
 builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
 
-// 3. Configurar Pipeline de peticiones
+// 4. Configurar Pipeline de peticiones
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -24,8 +32,6 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty; // Hace que Swagger sea la página principal
     });
 }
-
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
