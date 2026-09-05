@@ -1,0 +1,56 @@
+﻿@page "/login"
+@using Frontend_Vehiculos.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>Iniciar Sesión</h3>
+
+<EditForm Model="loginModel" OnValidSubmit="ProcesarLogin">
+    <div class="mb-3">
+        <label>Usuario:</label>
+        <InputText class="form-control" @bind-Value="loginModel.Usuario" />
+    </div>
+    <div class="mb-3">
+        <label>Contraseña:</label>
+        <InputText type="password" class="form-control" @bind-Value="loginModel.Password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(mensajeError))
+{
+    <div class="alert alert-danger mt-3">@mensajeError</div>
+}
+
+@code {
+    private LoginDto loginModel = new();
+    private string mensajeError = string.Empty;
+
+    private async Task ProcesarLogin()
+    {
+        var response = await Http.PostAsJsonAsync("api/Auth/login", loginModel);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var resultado = await response.Content.ReadFromJsonAsync<LoginResponseDto>();
+
+            // Guardar el token en la sesión local o estado de la app
+            // await LocalStorage.SetItemAsync("authToken", resultado.Token);
+
+            if (resultado?.Rol == "Admin")
+            {
+                // Redirigir al CRUD completo de categorías y vehículos
+                NavigationManager.NavigateTo("/categorias");
+            }
+            else
+            {
+                // Redirigir a una vista de consulta o bienvenida para usuarios normales
+                NavigationManager.NavigateTo("/catalogo");
+            }
+        }
+        else
+        {
+            mensajeError = "Credenciales incorrectas o usuario no encontrado.";
+        }
+    }
+}

@@ -1,42 +1,82 @@
 ﻿@page "/"
 @using Frontend_Vehiculos.Models
 @using Frontend_Vehiculos.Services
+@using System.Text.Json
 @inject ApiService ApiService
 
 <PageTitle>Gestión Integral - Microservicios</PageTitle>
 
 <h3>Prueba de Frontend + Gateway + Microservicios</h3>
 
-<!-- 1. Autenticación -->
+<!-- 1. Autenticación y Registro -->
 <div class="card mb-4 p-3 shadow-sm">
-    <h5>1. Iniciar Sesión (JWT)</h5>
-    <div class="d-flex gap-2 w-50">
-        <input @bind="usuario" placeholder="Usuario" class="form-control" />
-        <input @bind="password" type="password" placeholder="Contraseña" class="form-control" />
-        <button @onclick="EjecutarLogin" class="btn btn-primary text-nowrap">Iniciar Sesión</button>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">1. Autenticación (JWT)</h5>
+        <button @onclick="ToggleModoRegistro" class="btn btn-outline-secondary btn-sm">
+            @(mostrarRegistro ? "Volver a Iniciar Sesión" : "¿No tienes cuenta? Regístrate")
+        </button>
     </div>
+
+    @if (!mostrarRegistro)
+    {
+        <!-- Formulario de Login -->
+        <div class="d-flex gap-2 w-50">
+            <input @bind="usuario" placeholder="Usuario" class="form-control" />
+            <input @bind="password" type="password" placeholder="Contraseña" class="form-control" />
+            <button @onclick="EjecutarLogin" class="btn btn-primary text-nowrap">Iniciar Sesión</button>
+        </div>
+    }
+    else
+    {
+        <!-- Formulario de Registro -->
+        <div class="row g-2 w-75">
+            <div class="col-md-3">
+                <input @bind="regUsuario" placeholder="Nuevo Usuario" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <input @bind="regPassword" type="password" placeholder="Contraseña" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <input @bind="regEmail" placeholder="Correo electrónico" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <button @onclick="EjecutarRegistro" class="btn btn-success w-100">Registrar</button>
+            </div>
+        </div>
+    }
 </div>
 
 @if (!string.IsNullOrEmpty(token))
 {
     <div class="alert alert-success d-flex justify-content-between align-items-center mb-4">
         <div>
-            <strong>Token activo:</strong> @token.Substring(0, Math.Min(30, token.Length))...
+            <div>
+                <strong>Usuario en Token:</strong> @usuarioEnToken
+                <span class="badge @(esAdmin ? "bg-primary" : "bg-info text-dark") ms-2">
+                    Rol: @(esAdmin ? "Administrador" : "Usuario Normal")
+                </span>
+            </div>
+            <small class="text-muted font-monospace d-block mt-1">
+                <strong>Firma Token:</strong> @ObtenerVistaPreviaToken(token)
+            </small>
         </div>
         <button @onclick="CerrarSesion" class="btn btn-outline-danger btn-sm">Cerrar Sesión</button>
     </div>
 
-    <!-- 2. Sección Categorías (CRUD Completo) -->
+    <!-- 2. Sección Categorías -->
     <div class="card mb-4 p-3 shadow-sm">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h5>2. Gestión de Categorías</h5>
             <div>
-                <button @onclick="AbrirFormularioNuevaCategoria" class="btn btn-outline-primary me-2">+ Nueva Categoría</button>
+                @if (esAdmin)
+                {
+                    <button @onclick="AbrirFormularioNuevaCategoria" class="btn btn-outline-primary me-2">+ Nueva Categoría</button>
+                }
                 <button @onclick="CargarCategorias" class="btn btn-success">Cargar / Refrescar Categorías</button>
             </div>
         </div>
 
-        @if (mostrarFormularioCategoria)
+        @if (mostrarFormularioCategoria && esAdmin)
         {
             <div class="card card-body bg-light mb-3">
                 <h6>@(esModoEdicionCategoria ? "Editar Categoría" : "Nueva Categoría")</h6>
@@ -66,10 +106,13 @@
                         <div>
                             <strong>(ID: @cat.IdCategoria) @cat.Nombre</strong> - @cat.Descripcion
                         </div>
-                        <div>
-                            <button @onclick="() => SeleccionarCategoriaParaEditar(cat)" class="btn btn-outline-warning btn-sm me-2">Editar</button>
-                            <button @onclick="() => EliminarCategoria(cat.IdCategoria)" class="btn btn-outline-danger btn-sm">Eliminar</button>
-                        </div>
+                        @if (esAdmin)
+                        {
+                            <div>
+                                <button @onclick="() => SeleccionarCategoriaParaEditar(cat)" class="btn btn-outline-warning btn-sm me-2">Editar</button>
+                                <button @onclick="() => EliminarCategoria(cat.IdCategoria)" class="btn btn-outline-danger btn-sm">Eliminar</button>
+                            </div>
+                        }
                     </li>
                 }
             </ul>
@@ -80,17 +123,20 @@
         }
     </div>
 
-    <!-- 3. Sección Vehículos (CRUD Completo) -->
+    <!-- 3. Sección Vehículos -->
     <div class="card mb-4 p-3 shadow-sm">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h5>3. Gestión de Vehículos</h5>
             <div>
-                <button @onclick="AbrirFormularioNuevoVehiculo" class="btn btn-outline-primary me-2">+ Nuevo Vehículo</button>
+                @if (esAdmin)
+                {
+                    <button @onclick="AbrirFormularioNuevoVehiculo" class="btn btn-outline-primary me-2">+ Nuevo Vehículo</button>
+                }
                 <button @onclick="CargarVehiculos" class="btn btn-info text-white">Cargar / Refrescar Vehículos</button>
             </div>
         </div>
 
-        @if (mostrarFormularioVehiculo)
+        @if (mostrarFormularioVehiculo && esAdmin)
         {
             <div class="card card-body bg-light mb-3">
                 <h6>@(esModoEdicionVehiculo ? "Editar Vehículo" : "Nuevo Vehículo")</h6>
@@ -134,7 +180,10 @@
                         <th>Modelo</th>
                         <th>Precio</th>
                         <th>Stock</th>
-                        <th class="text-center">Acciones</th>
+                        @if (esAdmin)
+                        {
+                            <th class="text-center">Acciones</th>
+                        }
                     </tr>
                 </thead>
                 <tbody>
@@ -147,10 +196,13 @@
                             <td>@v.Modelo</td>
                             <td>$@v.Precio.ToString("F2")</td>
                             <td>@v.Stock</td>
-                            <td class="text-center">
-                                <button @onclick="() => SeleccionarParaEditar(v)" class="btn btn-warning btn-sm me-2">Editar</button>
-                                <button @onclick="() => EliminarVehiculo(v.IdVehiculo)" class="btn btn-danger btn-sm">Eliminar</button>
-                            </td>
+                            @if (esAdmin)
+                            {
+                                <td class="text-center">
+                                    <button @onclick="() => SeleccionarParaEditar(v)" class="btn btn-warning btn-sm me-2">Editar</button>
+                                    <button @onclick="() => EliminarVehiculo(v.IdVehiculo)" class="btn btn-danger btn-sm">Eliminar</button>
+                                </td>
+                            }
                         </tr>
                     }
                 </tbody>
@@ -170,63 +222,168 @@
 }
 
 @code {
-    private string usuario = "admin";
-    private string password = "123456";
+    private string usuario = string.Empty;
+    private string password = string.Empty;
     private string token = string.Empty;
+    private string usuarioEnToken = string.Empty;
+    private bool esAdmin = false;
     private string mensajeError = string.Empty;
     private string mensajeExito = string.Empty;
+
+    // Control de Registro
+    private bool mostrarRegistro = false;
+    private string regUsuario = string.Empty;
+    private string regPassword = string.Empty;
+    private string regEmail = string.Empty;
 
     private List<CategoriaDto>? categorias;
     private List<VehiculoDto>? vehiculos;
 
-    // Control de formularios de Categorías
     private bool mostrarFormularioCategoria = false;
     private bool esModoEdicionCategoria = false;
     private CategoriaDto categoriaEdicion = new();
 
-    // Control de formularios de Vehículos
     private bool mostrarFormularioVehiculo = false;
     private bool esModoEdicionVehiculo = false;
     private VehiculoDto vehiculoEdicion = new();
 
     protected override async Task OnInitializedAsync()
     {
-        await ApiService.CargarTokenGuardadoAsync();
-        token = ApiService.Token;
-
-        if (!string.IsNullOrEmpty(token))
-        {
-            await CargarCategorias();
-            await CargarVehiculos();
-        }
+        // Se limpia la sesión activa para que siempre solicite credenciales al ingresar al enlace
+        await LimpiarEstadoSesion();
     }
 
     private async Task EjecutarLogin()
     {
         LimpiarMensajes();
+
+        if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(password))
+        {
+            mensajeError = "Ingresa usuario y contraseña para continuar.";
+            return;
+        }
+
         bool exitoso = await ApiService.LoginAsync(usuario, password);
 
         if (exitoso)
         {
             token = ApiService.Token;
-            mensajeExito = "Sesión iniciada correctamente.";
+            ProcesarClaimsJWT(token);
+            mensajeExito = $"Sesión iniciada con éxito para el usuario '{usuarioEnToken}'.";
             await CargarCategorias();
             await CargarVehiculos();
         }
         else
         {
-            mensajeError = "Error al autenticar. Revisa que Microservicio_Auth y el Gateway estén corriendo.";
+            await LimpiarEstadoSesion();
+            mensajeError = "El usuario no existe o la contraseña es incorrecta. Por favor regístrate.";
+        }
+    }
+
+    private async Task EjecutarRegistro()
+    {
+        LimpiarMensajes();
+
+        if (string.IsNullOrWhiteSpace(regUsuario) || string.IsNullOrWhiteSpace(regPassword))
+        {
+            mensajeError = "Por favor completa el usuario y la contraseña.";
+            return;
+        }
+
+        bool exito = await ApiService.RegisterAsync(regUsuario, regPassword, regEmail);
+
+        if (exito)
+        {
+            mensajeExito = "Usuario registrado correctamente. Inicia sesión con tus credenciales.";
+            usuario = regUsuario;
+            password = regPassword;
+            mostrarRegistro = false;
+            regUsuario = string.Empty;
+            regPassword = string.Empty;
+            regEmail = string.Empty;
+        }
+        else
+        {
+            mensajeError = "Error al registrar el usuario. Es posible que el nombre ya exista.";
         }
     }
 
     private async Task CerrarSesion()
     {
-        await ApiService.LogoutAsync();
-        token = string.Empty;
-        categorias = null;
-        vehiculos = null;
+        await LimpiarEstadoSesion();
         LimpiarMensajes();
         mensajeExito = "Sesión cerrada correctamente.";
+    }
+
+    private async Task LimpiarEstadoSesion()
+    {
+        await ApiService.LogoutAsync();
+        token = string.Empty;
+        usuarioEnToken = string.Empty;
+        esAdmin = false;
+        categorias = null;
+        vehiculos = null;
+        mostrarFormularioCategoria = false;
+        mostrarFormularioVehiculo = false;
+    }
+
+    private void ToggleModoRegistro()
+    {
+        mostrarRegistro = !mostrarRegistro;
+        LimpiarMensajes();
+    }
+
+    // --- DECODIFICACIÓN Y LECTURA DE CLAIMS DEL TOKEN JWT ---
+
+    private void ProcesarClaimsJWT(string jwt)
+    {
+        esAdmin = false;
+        usuarioEnToken = usuario;
+
+        if (string.IsNullOrWhiteSpace(jwt)) return;
+
+        try
+        {
+            var parts = jwt.Split('.');
+            if (parts.Length < 2) return;
+
+            string payload = parts[1];
+            switch (payload.Length % 4)
+            {
+                case 2: payload += "=="; break;
+                case 3: payload += "="; break;
+            }
+
+            var jsonBytes = Convert.FromBase64String(payload);
+            using var doc = JsonDocument.Parse(jsonBytes);
+
+            foreach (var prop in doc.RootElement.EnumerateObject())
+            {
+                // Nombre / Sub
+                if (prop.Name.Equals("sub", StringComparison.OrdinalIgnoreCase) ||
+                    prop.Name.Equals("name", StringComparison.OrdinalIgnoreCase) ||
+                    prop.Name.EndsWith("/name", StringComparison.OrdinalIgnoreCase))
+                {
+                    usuarioEnToken = prop.Value.GetString() ?? usuario;
+                }
+
+                // Rol
+                if (prop.Name.Equals("role", StringComparison.OrdinalIgnoreCase) ||
+                    prop.Name.EndsWith("/role", StringComparison.OrdinalIgnoreCase))
+                {
+                    string? valorRol = prop.Value.ValueKind == JsonValueKind.String ? prop.Value.GetString() : prop.Value.ToString();
+                    esAdmin = string.Equals(valorRol, "Admin", StringComparison.OrdinalIgnoreCase);
+                }
+            }
+        }
+        catch { }
+    }
+
+    private string ObtenerVistaPreviaToken(string jwt)
+    {
+        if (string.IsNullOrEmpty(jwt) || jwt.Length < 35) return jwt;
+        // Muestra el encabezado e inicio junto a la firma final del JWT para evidenciar la diferencia entre tokens
+        return $"{jwt.Substring(0, 15)}...{jwt.Substring(jwt.Length - 20)}";
     }
 
     // --- MÉTODOS DE CATEGORÍAS ---
@@ -235,7 +392,6 @@
     {
         try
         {
-            LimpiarMensajes();
             categorias = await ApiService.GetCategoriasAsync();
         }
         catch (Exception ex)
@@ -246,6 +402,7 @@
 
     private void AbrirFormularioNuevaCategoria()
     {
+        if (!esAdmin) return;
         LimpiarMensajes();
         categoriaEdicion = new CategoriaDto();
         esModoEdicionCategoria = false;
@@ -254,6 +411,7 @@
 
     private void SeleccionarCategoriaParaEditar(CategoriaDto c)
     {
+        if (!esAdmin) return;
         LimpiarMensajes();
         categoriaEdicion = new CategoriaDto
         {
@@ -273,6 +431,7 @@
 
     private async Task GuardarCategoria()
     {
+        if (!esAdmin) return;
         try
         {
             LimpiarMensajes();
@@ -307,6 +466,7 @@
 
     private async Task EliminarCategoria(int id)
     {
+        if (!esAdmin) return;
         try
         {
             LimpiarMensajes();
@@ -333,7 +493,6 @@
     {
         try
         {
-            LimpiarMensajes();
             vehiculos = await ApiService.GetVehiculosAsync();
         }
         catch (Exception ex)
@@ -344,6 +503,7 @@
 
     private void AbrirFormularioNuevoVehiculo()
     {
+        if (!esAdmin) return;
         LimpiarMensajes();
         vehiculoEdicion = new VehiculoDto();
         esModoEdicionVehiculo = false;
@@ -352,6 +512,7 @@
 
     private void SeleccionarParaEditar(VehiculoDto v)
     {
+        if (!esAdmin) return;
         LimpiarMensajes();
         vehiculoEdicion = new VehiculoDto
         {
@@ -375,6 +536,7 @@
 
     private async Task GuardarVehiculo()
     {
+        if (!esAdmin) return;
         try
         {
             LimpiarMensajes();
@@ -409,6 +571,7 @@
 
     private async Task EliminarVehiculo(int id)
     {
+        if (!esAdmin) return;
         try
         {
             LimpiarMensajes();

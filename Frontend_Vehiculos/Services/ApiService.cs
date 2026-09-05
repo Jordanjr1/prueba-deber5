@@ -94,7 +94,12 @@ namespace Frontend_Vehiculos.Services
             var response = await _httpClient.PostAsJsonAsync("api/Vehiculos", vehiculo);
             return response.IsSuccessStatusCode;
         }
-
+        public async Task<bool> RegisterAsync(string usuario, string password, string email, string rol = "Normal")
+        {
+            var registerData = new { Usuario = usuario, Password = password, Email = email, Rol = rol };
+            var response = await _httpClient.PostAsJsonAsync("api/Auth/register", registerData);
+            return response.IsSuccessStatusCode;
+        }
         public async Task<bool> UpdateVehiculoAsync(VehiculoDto vehiculo)
         {
             SetAuthHeader();
@@ -126,8 +131,12 @@ namespace Frontend_Vehiculos.Services
         }
     }
 
+
     public class LoginResponseDto
     {
         public string Token { get; set; } = string.Empty;
+        public string Username { get; set; } = string.Empty;
+        public string Rol { get; set; } = string.Empty;
+        public string Mensaje { get; set; } = string.Empty;
     }
 }

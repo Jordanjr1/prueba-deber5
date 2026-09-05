@@ -16,6 +16,7 @@ namespace Frontend_Vehiculos
             builder.Services.AddScoped(sp => new HttpClient
             {
                 BaseAddress = new Uri("http://20.9.128.203:5000/")
+
             });
 
             // Registrar el servicio cliente de APIs

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Frontend_Vehiculos",
   "resources": {
-    "hash": "sha256-AW0RH9ypkRNSxJ1z+ygst+oup2PpLvQQIgHdUAExRCo=",
+    "hash": "sha256-KtJqCE61053oWqrW4co7DVQFsiYHsuzneV0Gln/wbhY=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.o04o2kgmw2.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.81n67i0rdz.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,8 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Frontend_Vehiculos.tw41qvdf4l.wasm": "Frontend_Vehiculos.wasm",
-      "Frontend_Vehiculos.vmpukpyykx.pdb": "Frontend_Vehiculos.pdb"
+      "Frontend_Vehiculos.oytkkm662h.wasm": "Frontend_Vehiculos.wasm",
+      "Frontend_Vehiculos.y912ox6e7q.pdb": "Frontend_Vehiculos.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.wlvwu26j41.js": "sha256-/FFh+hncmkDjkVdq8mZIy51/nXHJPYNgd/njEJAau7U="
@@ -412,10 +412,10 @@
       "WindowsBase.xrh1pzsh17.wasm": "sha256-PTVr6817aTUbnsNJNYM62QqznC41vKx+idMw2oKPQYI=",
       "mscorlib.c152hgsws1.wasm": "sha256-ADd9npxSWUEINZHpLAjdur/nbu8vDJWQnpTcdZzxhZo=",
       "netstandard.d2l21p6due.wasm": "sha256-JRwvgwrWXzEvLc098p6yD5FUWPaL7gHOu4gJzRkmQ1c=",
-      "Frontend_Vehiculos.tw41qvdf4l.wasm": "sha256-42ppQpfTBmX0w6099OhPpkB+QYFfR6DPg3wMDw4wFxw="
+      "Frontend_Vehiculos.oytkkm662h.wasm": "sha256-sGAPxLM4BQtG2Zt0W+cWEtQ0e6du+s2ur7zsE0OiR7g="
     },
     "pdb": {
-      "Frontend_Vehiculos.vmpukpyykx.pdb": "sha256-RxVtqZPrmsxbemXtL0Zff053DuuQuZbJtCB4mxUVaDU="
+      "Frontend_Vehiculos.y912ox6e7q.pdb": "sha256-9o649X2FzH4wSHhmIQs/zKoIm8/UQjEUDJR1J5InpMk="
     }
   },
   "cacheBootResources": true,

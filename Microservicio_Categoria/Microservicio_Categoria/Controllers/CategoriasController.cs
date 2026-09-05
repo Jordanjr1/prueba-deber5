@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microservicio_Categoria.Models;
-using Microservicio_Categoria.Services; // <-- No olvides este using para el producer
+using Microservicio_Categoria.Services;
 
 namespace Microservicio_Categoria.Controllers
 {
@@ -32,19 +32,57 @@ namespace Microservicio_Categoria.Controllers
             _context.Categorias.Add(categoria);
             await _context.SaveChangesAsync();
 
-            // Crear el objeto del evento con los datos que definimos en la pizarra
             var evento = new
             {
                 IdCategoria = categoria.IdCategoria,
                 NombreCategoria = categoria.Nombre
             };
 
-            // Enviar el mensaje a RabbitMQ para que el microservicio de vehículos se entere
             await _rabbitMQProducer.EnviarMensajeAsync(evento);
 
             return CreatedAtAction(nameof(GetCategorias), new { id = categoria.IdCategoria }, categoria);
         }
 
+        // PUT: api/Categorias/5  <-- MÉTODO AGREGADO
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCategoria(int id, Categoria categoria)
+        {
+            if (id != categoria.IdCategoria)
+            {
+                return BadRequest("El ID del parámetro no coincide con el objeto recibido.");
+            }
+
+            _context.Entry(categoria).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+
+                // Notificar la actualización a RabbitMQ para sincronizar otros microservicios
+                var evento = new
+                {
+                    IdCategoria = categoria.IdCategoria,
+                    NombreCategoria = categoria.Nombre
+                };
+
+                await _rabbitMQProducer.EnviarMensajeAsync(evento);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CategoriaExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // DELETE: api/Categorias/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategoria(int id)
         {
@@ -56,5 +94,9 @@ namespace Microservicio_Categoria.Controllers
             return NoContent();
         }
 
+        private bool CategoriaExists(int id)
+        {
+            return _context.Categorias.Any(e => e.IdCategoria == id);
+        }
     }
 }
