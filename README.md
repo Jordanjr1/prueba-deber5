@@ -24,6 +24,9 @@ Guía completa y estructurada del ecosistema de microservicios para la gestión 
 ├── Microservicio_Auth/         # Servicio de Autenticación, Usuarios y Tokens JWT
 ├── Microservicio_Categoria/    # Servicio de Categorías (Publisher de eventos)
 ├── Microservicio_Vehiculo/     # Servicio de Vehículos (Consumer de eventos)
+├── BaseDatos/                  # Scripts SQL de creación e inicialización de BDs
+├── CLAVES_AZURE_EJEMPLO.txt    # Plantilla con estructura de credenciales (placeholders)
+├── MEMORIA_COMANDOS_AZURE.txt  # Secuencia ordenada de comandos ejecutados en Azure CLI
 ├── docker-compose.yml          # Orquestación de infraestructura y contenedores
 └── README.md                   # Documentación oficial del repositorio
 ```
@@ -32,14 +35,14 @@ Guía completa y estructurada del ecosistema de microservicios para la gestión 
 
 ## 3. Servicios y Puertos Expuestos (Azure / Local)
 
-Para acceder a los servicios desplegados en Azure, reemplaza `<IP_AZURE>` por la dirección IP pública de la Máquina Virtual (ejemplo: `20.9.128.203`):
+Para acceder a los servicios desplegados en la IP pública de la Máquina Virtual (`20.9.128.203`):
 
-* **API Gateway (Enrutador Principal):** http://<IP_AZURE>:5000
-* **Microservicio Auth (Swagger UI):** http://<IP_AZURE>:5003
-* **Microservicio Categorías (Swagger UI):** http://<IP_AZURE>:5001
-* **Microservicio Vehículos (Swagger UI):** http://<IP_AZURE>:5002
-* **Panel de Administración RabbitMQ:** http://<IP_AZURE>:15672 (Usuario: admin | Contraseña: admin)
-* **Motor SQL Server (SSMS):** `<IP_AZURE>,1433` (Usuario: sa | Contraseña: Skrillex1.)
+* **API Gateway (Enrutador Principal):** http://20.9.128.203:5000
+* **Microservicio Auth (Swagger UI):** http://20.9.128.203:5003
+* **Microservicio Categorías (Swagger UI):** http://20.9.128.203:5001
+* **Microservicio Vehículos (Swagger UI):** http://20.9.128.203:5002
+* **Panel de Administración RabbitMQ:** http://20.9.128.203:15672 (Usuario: admin | Contraseña: admin)
+* **Motor SQL Server (SSMS):** `20.9.128.203,1433` (Usuario: sa | Contraseña: Skrillex1.)
 
 ---
 
@@ -56,19 +59,58 @@ Para acceder a los servicios desplegados en Azure, reemplaza `<IP_AZURE>` por la
 
 ---
 
-## 5. Base de Datos y Persistencia
+## 5. Configuración de Base de Datos y Persistencia
 
-El contenedor de SQL Server gestiona automáticamente tres bases de datos independientes mediante Entity Framework Core:
+**Ubicación de scripts SQL:** `BaseDatos/`
 
-* **AuthDB:** Almacenamiento de usuarios, credenciales y asignación de roles.
-* **CategoriaDB:** Gestión del catálogo de categorías.
-* **VehiculoDB:** Registro y detalle técnico de vehículos.
+El contenedor de SQL Server gestiona tres bases de datos relacionales independientes:
+
+### `AuthDB.sql` (Base de Datos de Autenticación)
+* Crea la base de datos `AuthDB`.
+* Almacena usuarios, credenciales y asignación de roles para la generación de tokens JWT.
+
+### `CategoriaDB.sql` (Base de Datos para el Microservicio de Categorías)
+* Crea la base de datos `CategoriaDB`.
+* Crea el login a nivel de servidor y el usuario `Categoria_V` con contraseña `Skrillex1.`.
+* Asigna permisos de lectura y escritura (`db_owner`).
+* Crea la tabla `Categorias` e inserta los registros iniciales.
+
+### `VehiculoDB.sql` (Base de Datos para el Microservicio de Vehículos)
+* Crea la base de datos `VehiculoDB`.
+* Crea el login a nivel de servidor y el usuario `Vehiculos` con contraseña `Skrillex1.`.
+* Asigna permisos de lectura y escritura (`db_owner`).
+* Crea la tabla `Vehiculos` e inserta los registros iniciales.
 
 **Persistencia:** Toda la información se conserva de forma persistente a través del volumen `prueba-deber5_mssqldata` asociado al contenedor `sql_server_db`.
 
 ---
 
-## 6. Instrucciones Paso a Paso de Despliegue en Azure
+## 6. Archivos de Soporte y Seguridad en Azure
+
+### `CLAVES_AZURE_EJEMPLO.txt`
+
+Contiene la plantilla estándar con la estructura de variables y credenciales requeridas por la aplicación (placeholders sin contraseñas reales):
+
+* Estructura de cadenas de conexión a bases de datos (AuthDB, CategoriaDB, VehiculoDB).
+* Configuración de la clave secreta JWT (`Jwt:SecretKey`).
+* Credenciales de acceso a RabbitMQ y SQL Server.
+
+> **Nota:** Por seguridad, las credenciales reales se gestionan mediante variables de entorno en Azure y se mantienen fuera del repositorio público.
+
+### `MEMORIA_COMANDOS_AZURE.txt`
+
+Documento de trazabilidad que registra en orden cronológico los comandos ejecutados en Azure CLI durante el despliegue:
+
+1. **Inicio de Sesión y Verificación:** `az login`, `az account show`
+2. **Resource Group:** `az group create`
+3. **Redes y Reglas NSG:** `az network nsg rule create` (Apertura de puertos 5000, 1433, 15672)
+4. **Instancia de VM y Docker:** Provisionamiento de la Máquina Virtual Ubuntu en Azure.
+5. **Despliegue e Inspección:** `docker compose up -d`, `docker compose ps`, `docker compose logs`
+6. **Eliminación de Recursos:** Comandos para detener servicios y eliminar el Resource Group.
+
+---
+
+## 7. Instrucciones Paso a Paso de Despliegue en Azure
 
 ### Clonar el Repositorio en la VM:
 
@@ -96,4 +138,4 @@ docker compose up -d
 * **Autenticación:** Envía una petición POST al endpoint de Login en :5003 (o a través del Gateway en :5000) para obtener el Token JWT.
 * **Consumo por Gateway:** Accede a endpoints protegidos enviando la cabecera `Authorization: Bearer <TOKEN>`.
 * **Comunicación Asíncrona:** Crea o actualiza una categoría desde :5001. El Microservicio de Categorías publicará el evento en RabbitMQ y el Microservicio de Vehículos (:5002) lo procesará en tiempo real.
-* **Auditoría en SSMS:** Conéctate desde tu máquina local mediante SQL Server Management Studio hacia `<IP_AZURE>,1433` utilizando el login `sa`.
+* **Auditoría en SSMS:** Conéctate desde tu máquina local mediante SQL Server Management Studio hacia `20.9.128.203,1433` utilizando el login `sa`.
